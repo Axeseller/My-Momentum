@@ -1,0 +1,28 @@
+# Images Folder
+
+Place your images here following this structure:
+
+## Required Images:
+
+### Hero Section (26 de enero):
+- `hero-image.jpg` - Main image representing Momentum/Prepa Tec
+
+### Autobiography Section (29 de enero):
+- `childhood-1.jpg` - Photo from early childhood
+- `childhood-2.jpg` - Photo from primary school
+- `childhood-3.jpg` - Photo from secondary school
+
+### Top 10 Moments (29 de enero - 3 de febrero):
+- `moment-1.jpg` through `moment-10.jpg` - Your top 10 moments at Prepa Tec
+
+## Image Guidelines:
+- Use JPG or PNG format
+- Recommended resolution: 1920x1080 or higher
+- Keep file sizes reasonable (under 2MB per image)
+- Use descriptive filenames if you want to rename them
+- Ensure photos follow school regulations (no alcohol, vapes, etc.)
+
+## Tips:
+- Use high-quality images for better visual impact
+- Consider the aspect ratios for better layout display
+- Compress images if they're too large to improve loading times

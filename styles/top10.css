@@ -1,0 +1,194 @@
+/* =====================================================
+   TOP10.CSS - Top 10 Moments Section Styles
+   ===================================================== */
+
+.top10 {
+    background-color: var(--color-bg-light);
+    padding: var(--spacing-xl) 0;
+}
+
+.moments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+/* Moment Card */
+.moment-card {
+    position: relative;
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.moment-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Moment Number Badge */
+.moment-number {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Moment Image */
+.moment-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.moment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.moment-card:hover .moment-image img {
+    transform: scale(1.1);
+}
+
+/* Moment Content */
+.moment-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    flex: 1;
+}
+
+.moment-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.moment-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    flex: 1;
+}
+
+/* Category Tag */
+.moment-category {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-bg-light);
+    color: var(--color-accent);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    align-self: flex-start;
+    margin-top: var(--spacing-xs);
+}
+
+/* =====================================================
+   ALTERNATIVE LAYOUTS
+   ===================================================== */
+
+/* Featured card (first moment) */
+.moment-card:first-child {
+    grid-column: span 2;
+}
+
+.moment-card:first-child .moment-image {
+    height: 400px;
+}
+
+.moment-card:first-child .moment-number {
+    width: 64px;
+    height: 64px;
+    font-size: 1.75rem;
+}
+
+.moment-card:first-child .moment-title {
+    font-size: 2rem;
+}
+
+/* =====================================================
+   RESPONSIVE TOP 10
+   ===================================================== */
+
+@media (max-width: 968px) {
+    .moments-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .moment-card:first-child {
+        grid-column: span 1;
+    }
+    
+    .moment-card:first-child .moment-image {
+        height: 280px;
+    }
+    
+    .moment-card:first-child .moment-number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+    
+    .moment-card:first-child .moment-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .moments-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .moment-image {
+        height: 240px;
+    }
+    
+    .moment-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .moment-title {
+        font-size: 1.25rem;
+    }
+    
+    .moment-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .moment-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .moment-image {
+        height: 200px;
+    }
+}
