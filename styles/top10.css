@@ -59,14 +59,16 @@
     position: relative;
 }
 
-.moment-image img {
+.moment-image img,
+.moment-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.moment-card:hover .moment-image img {
+.moment-card:hover .moment-image img,
+.moment-card:hover .moment-image video {
     transform: scale(1.1);
 }
 
